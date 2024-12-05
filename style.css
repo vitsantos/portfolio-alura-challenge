@@ -5,6 +5,10 @@
     --cor-do-link: #464646;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--cor-de-fundo);
     color: #464646;
@@ -13,6 +17,9 @@ body {
     box-sizing: border-box;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 ol, ul, li {
@@ -28,14 +35,25 @@ a {
 .cabecalho {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
     background-color: var(--cor-de-fundo-menu);
     color: #494949;
-    width: 80%;
+    width: 100%;
+    padding: 0 10%;
+    align-items: center;
+}
+
+#contato {
+    font-weight: 700;
+}
+
+.cabecalho__nome {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .cabecalho__logo {
-    max-width: 80px; /* Ajuste para telas pequenas */
+    height: 22px; 
 }
 
 .cabecalho__titulo {
@@ -43,23 +61,35 @@ a {
     text-align: center;
 }
 
-.navegacao__lista {
-    display: none;
-    gap: 36px;
+.navegacao {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content:space-around;
+    margin: 0;
 }
+
 
 .navegacao__elemento a {
     font-size: 0.9rem;
 }
-/* ------------------------------ Seção Apresentação ------------------------------*/
 
+/* ------------------------------ Seção Apresentação ------------------------------*/
 .apresentacao {
     display: flex;
     justify-content: center;
     width: 80%;
+    position: relative;
+    top: 10%;
+    left: 10%;
     height: 368px;
     align-items: center;
     padding: 25px;
+    gap: 1%;
+}
+.apresentacao__foto {
+    width: 22%;
 }
 
 .apresentacao__titulo {
@@ -127,10 +157,23 @@ a {
     justify-content: space-evenly;
 }
 
+.habilidades__icone {
+    width: 28px;
+}
+
 .habilidades__elemento{
     width: 176px;
     height: 174px;
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.habilidades__elemento p {
+    margin: 0;
 }
 
 /*------------------------------ Seção de Hobbies --------------------------------*/
@@ -149,12 +192,24 @@ a {
     justify-content: space-evenly;
 }
 
+.hobbies__icone {
+    width: 28px;
+}
+
 .hobbies__elemento{
     width: 176px;
     height: 174px;
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
 }
 
+.hobbies__elemento p {
+    margin: 0;
+}
 
 /*------------------------------ Seção de Formação Acadêmica --------------------------------*/
 
@@ -164,32 +219,170 @@ a {
     align-items: center;
     flex-direction: column;
     font-weight: 700;
+    height: 581px;
+    background-color: #EAF2FD;
+    padding: 2.5% 10%;
 }
 
-.formacao__lista{
+.formacao_lista{
+    margin: auto;
     display: flex;
     width: 100%;
-    flex-direction: row;
+    gap: 15px;
     justify-content: center;
-    gap: 10px;
-}
-.formacao__elemento{
-    width: 368px;
-    height:347px;
-    background-color: #FFFFFF;
+    /* gap: 10px; */
+    /* width: 500px; */
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.img_group{
+    display: flex;
+    background-color: #ffffff;
+    width: 368px;
+    height: 256px;
+    align-items: center;
+}
+
+.img_group img {
+    margin: auto;
 }
 
 .formacao__icone{
     height: 130px;
 }
 
+.description {
+    display: flex;
+    width: 100%;
+    flex-direction: column;    
+    text-align: left;
+}
+
+.description p, small {
+    margin: 0;
+}
+
 
 
 /*------------------------------ Seção de Projetos --------------------------------*/
 
+/* n tive */
+
 
 /*------------------------------ Seção de Contato ---------------------------------*/
+
+
+/* Seção de contato */
+.contato {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contato_img{
+    gap: 0;
+}
+
+/* Imagem */
+.contato img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Formulário */
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+}
+
+.contato input, textarea {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Título */
+.contato__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.contato__formulario p {
+    margin: 0;
+    font-weight: 500;
+    margin-top: -22px;
+}
+
+/* Campos do formulário */
+.contato__campo {
+    height: 56px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.contato__campo:focus {
+    border-bottom-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Textarea */
+.contato__campo--textarea {
+    min-height: 136px;
+    resize: none;
+}
+
+/* Botão */
+.contato__botao {
+    max-width: 165px;
+    height: auto;
+    padding: 15px;
+    font-size: .9rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato__botao:hover {
+    background-color: #0056b3;
+}
+
+
+/* .contato {
+    width: 100%;
+    height: 890px;
+    display: flex;
+}
+
+
+.contato input, textarea {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+.contato__campo{
+    background-color: #ffffff;
+    padding: 64px 152px;
+}
+
+.contato__formulario{
+    width: 80%;
+} */
 
 
 /* ------------------------------ Responsividade ---------------------------------------*/
@@ -214,7 +407,7 @@ a {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        margin-top: 0;
+        margin: 0;
     }
 
     .navegacao__elemento a {
