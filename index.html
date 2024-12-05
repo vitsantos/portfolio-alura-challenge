@@ -15,8 +15,10 @@
 <body>
     <!-- Menu -->
     <header class="cabecalho">
+        <div class="cabecalho__nome">
         <img class="cabecalho__logo" src="assets/vector.png" alt="Logo">
         <h1 class="cabecalho__titulo">Vitória Emilly</h1>
+        </div>
         <nav class="navegacao">
             <ul class="navegacao__lista">
                 <li class="navegacao__elemento"><a href="#sobre-mim">Sobre mim</a></li>
@@ -24,7 +26,7 @@
                 <li class="navegacao__elemento"><a href="#hobbies">Hobbies</a></li>
                 <li class="navegacao__elemento"><a href="#formacao">Formação</a></li>
                 <li class="navegacao__elemento"><a href="#projetos">Projetos</a></li>
-                <li class="navegacao__elemento"><a href="#contato">Contato</a></li>
+                <li class="navegacao__elemento" id="contato"><a href="#contato">vitoria.emillysm@gmail.com</a></li>
             </ul>
         </nav>
     </header>
@@ -114,45 +116,41 @@
     <!-- Seção de Formação Acadêmica -->
     <section class="formacao" id="formacao">
         <h2 class="formacao__titulo">Formação Acadêmica</h2>
-        <ul class="formacao__lista">
-            <li class="formacao__elemento">
-                <img class="formacao__icone" src="assets/ufc.png" alt="UFC">
-                <div>
-                    <h3 class="formacao__nome">Engenharia de Computação</h3>
-                    <p class="formacao__detalhe">2023 - Atual - UFC</p>
+        <div class="formacao_lista">
+            <div class="vivi">
+                <div class="img_group">
+                    <img class="formacao__icone" src="assets/eeep.png" alt="EEEP Rita Aguiar Barbosa">
                 </div>
-            </li>
-            <li class="formacao__elemento">
-                <img class="formacao__icone" src="assets/eeep.png" alt="EEEP Rita Aguiar Barbosa">
-                <div>
-                    <h3 class="formacao__nome">Técnica em Redes de Computadores</h3>
-                    <p class="formacao__detalhe">2020-2022 - EEEP Rita Aguiar Barbosa</p>
+                <div class="description">
+                    <p>Técnico em Redes de Computadores</p>
+                    <small>2020 - 2022</small>
                 </div>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Seção de Projetos -->
-    <section class="projetos" id="projetos">
-        <h2 class="projetos__titulo">Experiência Profissional</h2>
-        <div class="projetos__conteiner">
-            <h3 class="projetos__nome">FIXANET TELECOM - Estagiário</h3>
-            <p class="projetos__descricao">Estágio na área de redes e telecomunicações.</p>
-        </div>
-        <div class="projetos__conteiner">
-            <h3 class="projetos__nome">COMUNIC - Designer Gráfico</h3>
-            <p class="projetos__descricao">Designer gráfico para fachadas de loja e impressão de material publicitário em geral. </p>
-        </div>
+            </div>  
+            
+            <div class="vivi">
+                <div class="img_group">
+                    <img class="formacao__icone" src="assets/ufc.png" alt="UFC">
+                </div>
+                <div class="description">
+                    <p>Engenharia de Computação</p>
+                    <small>2023 - Atual - UFC</small>
+                </div>
+            </div>  
     </section>
 
     <!-- Seção de Contato -->
     <section class="contato" id="contato">
-        <h2 class="contato__titulo">Contato</h2>
+        <div class="contato_img">
+            <img src="/assets/contact_image.png" alt="telefone com fio">
+        </div>
         <form class="contato__formulario">
+            <h2 class="contato__titulo">Contato</h2>
+            <p>Quer entrar em contato comigo?<br>
+                Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
             <input class="contato__campo" type="text" placeholder="Nome">
             <input class="contato__campo" type="email" placeholder="E-mail">
             <textarea class="contato__campo contato__campo--textarea" placeholder="Mensagem"></textarea>
-            <button class="contato__botao" type="submit">Enviar</button>
+            <button class="contato__botao" type="submit">Enviar mensagem</button>
         </form>
     </section>
 </body>
